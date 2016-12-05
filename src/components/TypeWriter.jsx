@@ -98,10 +98,14 @@ class TypeWriter extends React.Component {
       fixed,
       ...props
     } = this.props;
+
+    let spanProps = Object.assign({}, props);
+    Object.keys(TypeWriter.propTypes).forEach(k => delete spanProps[k]);
+
     const {
       visibleChars
     } = this.state;
-    const container = <span {...props}>{children}</span>;
+    const container = <span {...spanProps}>{children}</span>;
     const hideStyle = fixed ? {visibility: 'hidden'} : {display: 'none'};
 
     return styleComponentSubstring(container, hideStyle, visibleChars);
