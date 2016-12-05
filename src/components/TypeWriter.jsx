@@ -141,7 +141,8 @@ TypeWriter.propTypes = {
   maxDelay: React.PropTypes.number,
   minDelay: React.PropTypes.number,
   onTypingEnd: React.PropTypes.func,
-  onTyped: React.PropTypes.func
+  onTyped: React.PropTypes.func,
+  initDelay: React.PropTypes.number,
 };
 
 TypeWriter.defaultProps = {
